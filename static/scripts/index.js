@@ -20,9 +20,14 @@ $(document).ready(function(){
             $("body").removeClass("home").addClass("detail");
         }
         if($("body").hasClass("camera")){
-            $("body").removeClass("camera").addClass("upload");
+            $("body").removeClass("camera").addClass("edit");
         }
-
+        if($("body").hasClass("edit")){
+            $("body").removeClass("edit").addClass("upload");
+        }
+        if($("body").hasClass("search")){
+            $("body").removeClass("search").addClass("result");
+        }
     });
 
     $(".nav-left").click(function(){
@@ -32,17 +37,23 @@ $(document).ready(function(){
         if($("body").hasClass("camera")) {
             $("body").removeClass("camera").addClass("home");
         }
+        if($("body").hasClass("edit")) {
+            $("body").removeClass("edit").addClass("camera");
+        }
         if($("body").hasClass("upload")) {
-            $("body").removeClass("upload").addClass("camera");
+            $("body").removeClass("upload").addClass("edit");
+        }
+        if($("body").hasClass("search")) {
+            $("body").removeClass("search").addClass("home");
         }
         if($("body").hasClass("result")) {
-            $("body").removeClass("result").addClass("home");
+            $("body").removeClass("result").addClass("search");
         }
     });
 
     $(".nav-right").click(function(){
         if($("body").hasClass("home")) {
-            $("body").removeClass("home").addClass("result");
+            $("body").removeClass("home").addClass("search");
         }
     });
 
