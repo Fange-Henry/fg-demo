@@ -3,58 +3,262 @@
  */
 $(document).ready(function(){
 
-    $(".tab-1").click(function () {
-        $("body").removeClass("detail").removeClass("profile").addClass("home");
-    });
+$("button").click(function () {
 
-    $(".tab-2").click(function () {
-        $("body").removeClass("detail").removeClass("profile").removeClass("home").addClass("camera");
-    });
+    if($("body").hasClass("home"))
+    {
+        if($(this).hasClass("nav-right"))
+        {
+            $("body").removeClass().addClass("search")
+            return false
+        }
+        if($(this).hasClass("pic-1"))
+        {
+            $("body").removeClass().addClass("dish-1")
+            return false
+        }
+        if($(this).hasClass("pic-2"))
+        {
+            $("body").removeClass().addClass("dish-2")
+            return false
+        }
+        if($(this).hasClass("pic-3"))
+        {
+            $("body").removeClass().addClass("dish-3")
+            return false
+        }
+        if($(this).hasClass("tab-1"))
+        {
+            $("body").removeClass().addClass("home")
+            return false
+        }
+        if($(this).hasClass("tab-2"))
+        {
+            $("body").removeClass().addClass("photo")
+            return false
+        }
+        if($(this).hasClass("tab-3"))
+        {
+            $("body").removeClass().addClass("account")
+            return false
+        }
+    }
 
-    $(".tab-3").click(function () {
-        $("body").removeClass("home").removeClass("detail").addClass("profile");
-    });
+    if($("body").hasClass("dish-1")){
+        if($(this).hasClass("nav-left"))
+        {
+            $("body").removeClass().addClass("home")
+            return false
+        }
+        if($(this).hasClass("btn-profile"))
+        {
+            $("body").removeClass().addClass("profile")
+            return false
+        }
+        if($(this).hasClass("tab-1"))
+        {
+            $("body").removeClass().addClass("home")
+            return false
+        }
+        if($(this).hasClass("tab-2"))
+        {
+            $("body").removeClass().addClass("photo")
+            return false
+        }
+        if($(this).hasClass("tab-3"))
+        {
+            $("body").removeClass().addClass("account")
+            return false
+        }
+    }
 
-    $(".container").click(function(){
-        if($("body").hasClass("home")){
-            $("body").removeClass("home").addClass("detail");
+    if($("body").hasClass("dish-2")){
+        if($(this).hasClass("nav-left"))
+        {
+            $("body").removeClass().addClass("home")
+            return false
         }
-        if($("body").hasClass("camera")){
-            $("body").removeClass("camera").addClass("edit");
+        if($(this).hasClass("tab-1"))
+        {
+            $("body").removeClass().addClass("home")
+            return false
         }
-        if($("body").hasClass("edit")){
-            $("body").removeClass("edit").addClass("upload");
+        if($(this).hasClass("tab-2"))
+        {
+            $("body").removeClass().addClass("photo")
+            return false
         }
-        if($("body").hasClass("search")){
-            $("body").removeClass("search").addClass("result");
+        if($(this).hasClass("tab-3"))
+        {
+            $("body").removeClass().addClass("account")
+            return false
         }
-    });
+    }
 
-    $(".nav-left").click(function(){
-        if($("body").hasClass("detail")) {
-            $("body").removeClass("detail").addClass("home");
+    if($("body").hasClass("dish-3")){
+        if($(this).hasClass("nav-left"))
+        {
+            $("body").removeClass().addClass("home")
+            return false
         }
-        if($("body").hasClass("camera")) {
-            $("body").removeClass("camera").addClass("home");
+        if($(this).hasClass("tab-1"))
+        {
+            $("body").removeClass().addClass("home")
+            return false
         }
-        if($("body").hasClass("edit")) {
-            $("body").removeClass("edit").addClass("camera");
+        if($(this).hasClass("tab-2"))
+        {
+            $("body").removeClass().addClass("photo")
+            return false
         }
-        if($("body").hasClass("upload")) {
-            $("body").removeClass("upload").addClass("edit");
+        if($(this).hasClass("tab-3"))
+        {
+            $("body").removeClass().addClass("account")
+            return false
         }
-        if($("body").hasClass("search")) {
-            $("body").removeClass("search").addClass("home");
-        }
-        if($("body").hasClass("result")) {
-            $("body").removeClass("result").addClass("search");
-        }
-    });
+    }
 
-    $(".nav-right").click(function(){
-        if($("body").hasClass("home")) {
-            $("body").removeClass("home").addClass("search");
+    if($("body").hasClass("profile")){
+        if($(this).hasClass("nav-left"))
+        {
+            $("body").removeClass().addClass("dish-1")
+            return false
         }
-    });
+        if($(this).hasClass("tab-1"))
+        {
+            $("body").removeClass().addClass("home")
+            return false
+        }
+        if($(this).hasClass("tab-2"))
+        {
+            $("body").removeClass().addClass("photo")
+            return false
+        }
+        if($(this).hasClass("tab-3"))
+        {
+            $("body").removeClass().addClass("account")
+            return false
+        }
+    }
+
+    if($("body").hasClass("search")){
+        if($(this).hasClass("nav-left"))
+        {
+            $("body").removeClass().addClass("home")
+            return false
+        }
+        if($(this).hasClass("btn-search"))
+        {
+            $("body").removeClass().addClass("result")
+            return false
+        }
+        if($(this).hasClass("tab-1"))
+        {
+            $("body").removeClass().addClass("home")
+            return false
+        }
+        if($(this).hasClass("tab-2"))
+        {
+            $("body").removeClass().addClass("photo")
+            return false
+        }
+        if($(this).hasClass("tab-3"))
+        {
+            $("body").removeClass().addClass("account")
+            return false
+        }
+    }
+
+    if($("body").hasClass("result")){
+        if($(this).hasClass("nav-left"))
+        {
+            $("body").removeClass().addClass("search")
+            return false
+        }
+        if($(this).hasClass("tab-1"))
+        {
+            $("body").removeClass().addClass("home")
+            return false
+        }
+        if($(this).hasClass("tab-2"))
+        {
+            $("body").removeClass().addClass("photo")
+            return false
+        }
+        if($(this).hasClass("tab-3"))
+        {
+            $("body").removeClass().addClass("account")
+            return false
+        }
+    }
+
+    if($("body").hasClass("account")){
+        if($(this).hasClass("nav-left"))
+        {
+            $("body").removeClass().addClass("home")
+            return false
+        }
+        if($(this).hasClass("tab-1"))
+        {
+            $("body").removeClass().addClass("home")
+            return false
+        }
+        if($(this).hasClass("tab-2"))
+        {
+            $("body").removeClass().addClass("photo")
+            return false
+        }
+        if($(this).hasClass("tab-3"))
+        {
+            $("body").removeClass().addClass("account")
+            return false
+        }
+    }
+
+    if($("body").hasClass("photo")){
+        if($(this).hasClass("nav-left"))
+        {
+            $("body").removeClass().addClass("home")
+            return false
+        }
+        if($(this).hasClass("tab-2"))
+        {
+            $("body").removeClass().addClass("edit")
+            return false
+        }
+    }
+
+    if($("body").hasClass("edit")){
+        if($(this).hasClass("nav-left"))
+        {
+            $("body").removeClass().addClass("photo")
+            return false
+        }
+        if($(this).hasClass("nav-right"))
+        {
+            $("body").removeClass().addClass("upload")
+            return false
+        }
+    }
+
+    if($("body").hasClass("upload")){
+        if($(this).hasClass("nav-left"))
+        {
+            $("body").removeClass().addClass("edit")
+            return false
+        }
+        if($(this).hasClass("nav-right"))
+        {
+            $("body").removeClass().addClass("home")
+            return false
+        }
+        if($(this).hasClass("tab-2"))
+        {
+            $("body").removeClass().addClass("home")
+            return false
+        }
+    }
+
+})
 
 });

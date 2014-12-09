@@ -1,180 +1,118 @@
-@theme-color:#FFA061;
-
 *{
   margin: 0;
   padding: 0;
+  border: none;
 }
 
-.top{
-  width: 320px;
-  height: 60px;
-
-  button{
-    width: 50px;
-    height: 30px;
-    border: none;
-    background: transparent;
-    position: relative;
-    top: 20px;
-    -webkit-appearance: none;
-    outline: none;
-    background-size: contain !important;
-    background-position: center !important;
-  }
-  .nav-left{
-    float: left;
-  }
-  .nav-right{
-    float: right;
-  }
-  .nav-center{
-    display: block;
-    width: 220px;
-    height: 30px;
-    margin: 0 auto 0;
-    text-align: center;
-    position: relative;
-    top: 20px;
-    color: @theme-color;
-    font-size: 20px;
-    background-size: contain !important;
-    background-position: center !important;
-  }
-}
-
-.bottom{
-  width: 320px;
-  height: 50px;
+html,body{
+  width: 100%;
+  height: 100%;
   position: absolute;
-  bottom: 0;
-
-  ul{
-    display: block;
-    width: 320px;
-    height: 50px;
-    list-style: none;
-
-    li{
-      float: left;
-      width: 33%;
-      height: 80%;
-      background-size: contain !important;
-      background-position: center !important;
-
-      &:nth-child(1){
-        background: url("../images/tab-home.png") no-repeat;
-      }
-      &:nth-child(2){
-        background: url("../images/tab-camera.png") no-repeat;
-      }
-      &:nth-child(3){
-        background: url("../images/tab-profile.png") no-repeat;
-      }
-    }
-  }
-}
-
-.container{
-  width: 320px;
-  height: 450px;
+  left: 0;
+  top: 0;
   background-position: center !important;
   background-size: contain !important;
 }
 
+button{
+  display: block;
+  -webkit-appearance: none;
+  //background: rgba(0,0,0,0.2);
+  position: absolute;
+  outline: none;
+  background: transparent;
+}
+.nav-left{
+  width: 11%;
+  height: 7%;
+  left: 0;
+  top: 0;
+}
+.nav-right{
+  width: 11%;
+  height: 7%;
+  right: 0;
+  top: 0;
+}
+.tab-1{
+  width: 16%;
+  height: 9%;
+  left: 12%;
+  bottom: 3%;
+}
+.tab-2{
+  width: 16%;
+  height: 10%;
+  left: 42%;
+  bottom: 3%;
+}
+.tab-3{
+  width: 16%;
+  height: 9%;
+  right: 12%;
+  bottom: 3%;
+}
+.pic-1{
+  width: 48%;
+  height: 24%;
+  right: 0;
+  top: 15%;
+}
+.pic-2{
+  width: 48%;
+  height: 24%;
+  left: 0;
+  top: 15%;
+}
+.pic-3{
+  width: 48%;
+  height: 24%;
+  left: 0;
+  top: 54%;
+}
+.btn-search{
+  width: 12%;
+  height: 7%;
+  right: 0;
+  top: 7.5%;
+}
+.btn-profile{
+  width: 50%;
+  height: 7%;
+  left: 0;
+  top: 7.5%;
+}
+
 .home{
-  .container{
-    background: url("../images/container-home.png") no-repeat;
-  }
-  .nav-center{
-    background: url("../images/header-home.png") no-repeat;
-  }
-  .nav-right{
-    background: url("../images/btn-search.png") no-repeat;
-  }
+  background: url("../images/home.jpg") no-repeat;
 }
-.detail{
-  .container{
-    background: url("../images/container-detail.png") no-repeat;
-  }
-  .nav-center{
-    background: url("../images/header-detail.png") no-repeat;
-  }
-  .nav-left{
-    background: url("../images/btn-back.png") no-repeat;
-  }
+.dish-1{
+  background: url("../images/dish-1.jpg") no-repeat;
 }
-.result{
-  .container{
-    background: url("../images/container-result.png") no-repeat;
-  }
-  .nav-center{
-    background: url("../images/header-result.png") no-repeat;
-  }
-  .nav-left{
-    background: url("../images/btn-back.png") no-repeat;
-  }
+.dish-2{
+  background: url("../images/dish-2.jpg") no-repeat;
 }
-.profile{
-  .container{
-    background: url("../images/container-profile.png") no-repeat;
-  }
-  .nav-center{
-    background: url("../images/header-profile.png") no-repeat;
-  }
-  .nav-right{
-    background: url("../images/btn-setting.png") no-repeat;
-  }
-}
-.camera{
-  .bottom{
-    display: none;
-  }
-  .container{
-    background: url("../images/container-camera.png") no-repeat;
-  }
-  .nav-center{
-    background: url("../images/header-camera.png") no-repeat;
-  }
-  .nav-left{
-    background: url("../images/btn-back.png") no-repeat;
-  }
-}
-.edit{
-  .bottom{
-    display: none;
-  }
-  .container{
-    background: url("../images/container-edit.png") no-repeat;
-  }
-  .nav-center{
-    background: url("../images/header-edit.png") no-repeat;
-  }
-  .nav-left{
-    background: url("../images/btn-back.png") no-repeat;
-  }
-}
-.upload{
-  .bottom{
-    display: none;
-  }
-  .container{
-    background: url("../images/container-upload.png") no-repeat;
-  }
-  .nav-center{
-    background: url("../images/header-upload.png") no-repeat;
-  }
-  .nav-left{
-    background: url("../images/btn-back.png") no-repeat;
-  }
+.dish-3{
+  background: url("../images/dish-3.jpg") no-repeat;
 }
 .search{
-  .container{
-    background: url("../images/container-search.png") no-repeat;
-  }
-  .nav-center{
-    background: url("../images/header-search.png") no-repeat;
-  }
-  .nav-left{
-    background: url("../images/btn-back.png") no-repeat;
-  }
+  background: url("../images/search.jpg") no-repeat;
+}
+.result{
+  background: url("../images/result-dish.jpg") no-repeat;
+}
+.profile{
+  background: url("../images/profile.jpg") no-repeat;
+}
+.account{
+  background: url("../images/account.jpg") no-repeat;
+}
+.photo{
+  background: url("../images/photo.jpg") no-repeat;
+}
+.edit{
+  background: url("../images/edit.jpg") no-repeat;
+}
+.upload{
+  background: url("../images/upload.jpg") no-repeat;
 }
